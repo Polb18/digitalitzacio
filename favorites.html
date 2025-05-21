@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="css/favorites.css">
+</head>
+<body>
+     <!-- Menu horizontal -->
+        <div class="barramenu">
+            <img src="img/tresbarras.png" alt="tresbarras">
+            <!-- Barra de búsqueda funcional -->
+            <form class="buscador" action="#" method="GET">
+                <input 
+                    type="search" 
+                    name="buscar" 
+                    placeholder="Buscar..." 
+                    aria-label="Buscar"
+                >
+            </form>
+            <!-- Notificaciones -->
+            <div class="notificaciones">
+                <img src="img/notificaciones.png" alt="notificaciones">
+                <span class="contador">6</span>
+            </div>
+            <!-- Idioma -->
+            <div class="idioma">
+                <img src="img/bandera.png" alt="bandera">
+                <select id="opciones" name="opciones">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <!-- Perfil -->
+            <div class="perfil">
+                <img src="img/perfil.png" alt="perfil">
+                <div class="info">
+                    <p class="nombre">Moni Roy</p>
+                    <p class="cargo">Admin</p>
+                </div>
+                <img src="img/felchausuario.png" alt="felchausuario" class="flecha">
+            </div>
+        </div>
+
+        <!-- Menu vertical -->
+        <div class="menu">
+            <img src="img/dashstack.png" alt="dashstack">
+            <div id="bonones">
+                <button class="active" onclick="location.href='dashboars.html'">
+                    <img src="img/velocimetro.png" alt="velocimetro">
+                    <p>Dashboard</p>
+                </button>
+                <button onclick="location.href='products.html'">
+                    <img src="img/cuadrados.png" alt="cuadrados">
+                    <p>Products</p>
+                </button>
+                <button onclick="location.href='favorites.html'">
+                    <img src="img/corazon.png" alt="corazon">
+                    <p>Favorites</p>
+                </button>
+                <button onclick="location.href='inbox.html'">
+                    <img src="img/chat.png" alt="chat">
+                    <p>Inbox</p>
+                </button>
+                <button>
+                    <img src="img/lista.png" alt="lista">
+                    <p>Order Lists</p>
+                </button>
+                <button>
+                    <img src="img/stock.png" alt="stock">
+                    <p>Product stock</p>
+                </button>
+            </div>
+            <hr>
+            <div id="pages">
+                <p>Pages</p>
+                <button>
+                    <img src="img/regalo.png" alt="regalo">
+                    <p>Pricing</p>
+                </button>
+                <button>
+                    <img src="img/calendario.png" alt="calendario">
+                    <p>Calender</p>
+                </button>
+                <button>
+                    <img src="img/todo.png" alt="todo">
+                    <p>To-Do</p>
+                </button>
+                <button>
+                    <img src="img/contacto.png" alt="contacto">
+                    <p>Contact</p>
+                </button>
+                <button>
+                    <img src="img/dinero.png" alt="dinero">
+                    <p>Invoice</p>
+                </button>
+                <button>
+                    <img src="img/estadisticas.png" alt="estadisticas">
+                    <p>UI Elements</p>
+                </button>
+                <button>
+                    <img src="img/team.png" alt="team">
+                    <p>Team</p>
+                </button>
+                <button>
+                    <img src="img/table.png" alt="table">
+                    <p>Table</p>
+                </button>
+            </div>
+            <hr>
+            <div id="botones2">
+                <button>
+                    <img src="img/ajustes.png" alt="ajustes">
+                    <p>Settings</p>
+                </button>
+                <button>
+                    <img src="img/salir.png" alt="salir">
+                    <p>Log Out</p>
+                </button>
+            </div>
+        </div>
+        
+    <div class="favorites-container">
+        <h1>Favorites</h1>
+        <div class="favorites-grid">
+            <div class="favorite-card" id="series4">
+                <img class="product-img" src="img/relog_favorites.png" alt="Apple Watch Series 4">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Apple Watch Series 4</div>
+                <div class="product-price">$120.00</div>
+                <div class="stars">★★★★★ <span class="reviews">(131)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+            <div class="favorite-card" id="air">
+                <img class="product-img" src="img/relog_favorites.png" alt="Air-Max-270">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Air-Max-270</div>
+                <div class="product-price">$60.00</div>
+                <div class="stars">★★★★☆ <span class="reviews">(64)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+            <div class="favorite-card" id="minimal">
+                <img class="product-img" src="img/relog_favorites.png" alt="Minimal Chair Tool">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Minimal Chair Tool</div>
+                <div class="product-price">$24.59</div>
+                <div class="stars">★★★★☆ <span class="reviews">(83)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+            <div class="favorite-card" id="amazfit">
+                <img class="product-img" src="img/relog_favorites.png" alt="Amazfit Vip">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Amazfit Vip</div>
+                <div class="product-price">$90.00</div>
+                <div class="stars">★★★★☆ <span class="reviews">(52)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+            <div class="favorite-card" id="gumbo">
+                <img class="product-img" src="img/relog_favorites.png" alt="Gumbo Mouse">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Gumbo Mouse</div>
+                <div class="product-price">$45.00</div>
+                <div class="stars">★★★☆☆ <span class="reviews">(21)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+            <div class="favorite-card" id="camera">
+                <img class="product-img" src="img/relog_favorites.png" alt="Camera Tripod">
+                <img class="heart" src="img/favoritos.png" alt="favorite">
+                <div class="product-title">Camera Tripod</div>
+                <div class="product-price">$80.00</div>
+                <div class="stars">★★★★☆ <span class="reviews">(39)</span></div>
+                <button class="edit-btn">Edit Product</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

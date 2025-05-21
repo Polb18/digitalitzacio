@@ -1,0 +1,342 @@
+/** Menú lateral fijo a la izquierda **/
+.menu {
+    width: 240px;                /* Ancho del menú lateral */
+    height: 100vh;               /* Ocupa toda la altura de la ventana */
+    background-color: #fff;      /* Fondo blanco */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: fixed;             /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    border-right: 1px solid #eee;/* Línea divisoria a la derecha */
+    z-index: 20;                 /* Encima del contenido */
+}
+
+/* Línea horizontal decorativa en el menú lateral */
+.menu hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Contenedores de botones del menú lateral, uno debajo del otro */
+#bonones,
+#pages,
+#botones2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre botones */
+    width: 100%;
+}
+
+/* Botones del menú lateral: alineados, sin borde, ocupan todo el ancho */
+#bonones button,
+#pages button,
+#botones2 button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+    gap: 10px;
+}
+
+/* Elimina el margen de los textos de los botones del menú */
+#bonones button p,
+#pages button p,
+#botones2 button p {
+    margin: 0;
+}
+
+/* Menú horizontal superior fijo, a la derecha del menú lateral */
+.barramenu {
+    width: calc(100vw - 240px); /* Ocupa el ancho restante */
+    height: 70px;
+    position: fixed;
+    left: 240px;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    box-sizing: border-box;
+    padding: 0 40px 0 0;
+    z-index: 10;
+    border-top-right-radius: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Barra de búsqueda en el menú horizontal */
+.buscador {
+    position: absolute;
+    top: 16px;
+    left: 78px;
+    width: 388px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+/* Input de búsqueda: redondeado y estilizado */
+.buscador input[type="search"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    border: 0.6px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Icono de menú hamburguesa en el menú horizontal */
+.barramenu img[alt="tresbarras"] {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    opacity: 0.898;
+}
+
+/* Notificaciones con contador en la esquina */
+.notificaciones {
+    position: relative;
+    margin-right: 16px;
+}
+.notificaciones img {
+    width: 28px;
+    height: 28px;
+}
+.contador {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Selector de idioma en el menú horizontal */
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.idioma img {
+    width: 32px;
+    height: 22px;
+}
+.idioma select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Perfil de usuario en el menú horizontal */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.perfil img[alt="perfil"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.perfil .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+}
+.perfil .nombre {
+    font-weight: 600;
+    margin: 0;
+    font-size: 16px;
+}
+.perfil .cargo {
+    color: #888;
+    margin: 0;
+    font-size: 14px;
+}
+.perfil .flecha {
+    width: 18px;
+    height: 18px;
+}
+
+
+body {
+    background: #F5F6FA;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenido principal alineado a la derecha del menú */
+.contenedor-orders {
+    max-width: 1200px;                /* Ancho máximo del contenido */
+    margin-left: 240px;               /* Deja espacio para el menú lateral */
+    padding: 100px 32px 32px 32px;    /* Espaciado interno (arriba, derecha, abajo, izquierda) */
+    min-height: 100vh;                /* Al menos toda la altura de la ventana */
+    box-sizing: border-box;
+}
+
+/* Título principal de la página de órdenes */
+.titulo-orders {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Filtros de la tabla de órdenes */
+.filtros-orders {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Botón de filtro */
+.btn-filtro {
+    background: #F5F6FA;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.btn-filtro img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Select de filtro */
+.select-filtro {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    background: #fff;
+    color: #222;
+}
+
+/* Botón para resetear los filtros */
+.btn-reset {
+    background: none;
+    border: none;
+    color: #FF6B81;
+    font-weight: 600;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Tabla de órdenes */
+.tabla-orders {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+.tabla-orders th, .tabla-orders td {
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 15px;
+}
+.tabla-orders th {
+    color: #888;
+    font-weight: 600;
+    background: #F5F6FA;
+}
+.tabla-orders tr {
+    border-bottom: 1px solid #F0F0F0;
+}
+.tabla-orders tr:last-child {
+    border-bottom: none;
+}
+
+/* Estados de la orden (colores para cada estado) */
+.estado {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+.estado.completado {
+    background: #4ADE80;
+}
+.estado.procesando {
+    background: #4880FF;
+}
+.estado.rechazado {
+    background: #FF6B81;
+}
+.estado.cancelado {
+    background: #FFC542;
+    color: #222;
+}
+.estado.en-ruta {
+    background: #A78BFA;
+}
+
+/* Paginación de la tabla de órdenes */
+.paginacion-orders {
+    font-size: 14px;
+    color: #888;
+    padding: 16px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paginacion-btns .btn-pag {
+    background: #F5F6FA;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-left: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Responsive: adapta el layout en pantallas pequeñas */
+@media (max-width: 1200px) {
+    .contenedor-orders {
+        margin-left: 0;                   /* Elimina el espacio del menú lateral */
+        padding: 100px 8px 24px 8px;      /* Reduce el padding */
+        max-width: 100vw;                 /* Ocupa todo el ancho */
+    }
+    .menu {
+        display: none;                    /* Oculta el menú lateral */
+    }
+    .barramenu {
+        left: 0;
+        width: 100vw;                     /* El menú horizontal ocupa todo el ancho */
+    }
+}

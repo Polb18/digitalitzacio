@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Starred</title>
+    <link rel="stylesheet" href="css/starred.css">
+</head>
+<body>
+
+     <!-- Menu horizontal -->
+        <div class="barramenu">
+            <img src="img/tresbarras.png" alt="tresbarras">
+            <!-- Barra de búsqueda funcional -->
+            <form class="buscador" action="#" method="GET">
+                <input 
+                    type="search" 
+                    name="buscar" 
+                    placeholder="Buscar..." 
+                    aria-label="Buscar"
+                >
+            </form>
+            <!-- Notificaciones -->
+            <div class="notificaciones">
+                <img src="img/notificaciones.png" alt="notificaciones">
+                <span class="contador">6</span>
+            </div>
+            <!-- Idioma -->
+            <div class="idioma">
+                <img src="img/bandera.png" alt="bandera">
+                <select id="opciones" name="opciones">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <!-- Perfil -->
+            <div class="perfil">
+                <img src="img/perfil.png" alt="perfil">
+                <div class="info">
+                    <p class="nombre">Moni Roy</p>
+                    <p class="cargo">Admin</p>
+                </div>
+                <img src="img/felchausuario.png" alt="felchausuario" class="flecha">
+            </div>
+        </div>
+
+        <!-- Menu vertical -->
+        <div class="menu">
+            <img src="img/dashstack.png" alt="dashstack">
+            <div id="bonones">
+                <button class="active" onclick="location.href='dashboars.html'">
+                    <img src="img/velocimetro.png" alt="velocimetro">
+                    <p>Dashboard</p>
+                </button>
+                <button onclick="location.href='products.html'">
+                    <img src="img/cuadrados.png" alt="cuadrados">
+                    <p>Products</p>
+                </button>
+                <button onclick="location.href='favorites.html'">
+                    <img src="img/corazon.png" alt="corazon">
+                    <p>Favorites</p>
+                </button>
+                <button onclick="location.href='inbox.html'">
+                    <img src="img/chat.png" alt="chat">
+                    <p>Inbox</p>
+                </button>
+                <button>
+                    <img src="img/lista.png" alt="lista">
+                    <p>Order Lists</p>
+                </button>
+                <button>
+                    <img src="img/stock.png" alt="stock">
+                    <p>Product stock</p>
+                </button>
+            </div>
+            <hr>
+            <div id="pages">
+                <p>Pages</p>
+                <button>
+                    <img src="img/regalo.png" alt="regalo">
+                    <p>Pricing</p>
+                </button>
+                <button>
+                    <img src="img/calendario.png" alt="calendario">
+                    <p>Calender</p>
+                </button>
+                <button>
+                    <img src="img/todo.png" alt="todo">
+                    <p>To-Do</p>
+                </button>
+                <button>
+                    <img src="img/contacto.png" alt="contacto">
+                    <p>Contact</p>
+                </button>
+                <button>
+                    <img src="img/dinero.png" alt="dinero">
+                    <p>Invoice</p>
+                </button>
+                <button>
+                    <img src="img/estadisticas.png" alt="estadisticas">
+                    <p>UI Elements</p>
+                </button>
+                <button>
+                    <img src="img/team.png" alt="team">
+                    <p>Team</p>
+                </button>
+                <button>
+                    <img src="img/table.png" alt="table">
+                    <p>Table</p>
+                </button>
+            </div>
+            <hr>
+            <div id="botones2">
+                <button>
+                    <img src="img/ajustes.png" alt="ajustes">
+                    <p>Settings</p>
+                </button>
+                <button>
+                    <img src="img/salir.png" alt="salir">
+                    <p>Log Out</p>
+                </button>
+            </div>
+        </div>
+        
+    <div class="contenedor-starred">
+        <h1 class="titulo-starred">Inbox</h1>
+        <div class="zona-starred">
+            <aside class="menu-lateral">
+                <button class="btn-redactar">+ Compose</button>
+                <div>
+                    <div class="titulo-menu">My Email</div>
+                    <ul class="lista-correos">
+                        <li>
+                            <a href="inbox.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;width:100%;">
+                                Inbox <span class="num-correos">1253</span>
+                            </a>
+                        </li>
+                        <li class="activo">Starred <span class="num-correos">245</span></li>
+                        <li>Sent <span class="num-correos">24,532</span></li>
+                        <li>Draft <span class="num-correos">09</span></li>
+                        <li>Spam <span class="num-correos">14</span></li>
+                        <li>Important <span class="num-correos">18</span></li>
+                        <li>Bin <span class="num-correos">9</span></li>
+                    </ul>
+                </div>
+                <div class="seccion-label">
+                    <div class="titulo-menu">Label</div>
+                    <ul class="lista-labels">
+                        <li><span class="label-color label-primary"></span>Primary</li>
+                        <li><span class="label-color label-social"></span>Social</li>
+                        <li><span class="label-color label-work"></span>Work</li>
+                        <li><span class="label-color label-friends"></span>Friends</li>
+                    </ul>
+                    <div class="crear-label">+ Create New Label</div>
+                </div>
+            </aside>
+            <main class="zona-mensajes">
+                <div class="barra-busqueda">
+                    <input class="input-buscar" type="search" placeholder="Search mail">
+                    <button class="icono-btn"><img src="img/search.png" alt="Buscar"></button>
+                    <button class="icono-btn"><img src="img/settings.png" alt="Ajustes"></button>
+                    <button class="icono-btn"><img src="img/lista.png" alt="Vista lista"></button>
+                    <button class="icono-btn"><img src="img/cuadrados.png" alt="Vista cuadricula"></button>
+                </div>
+                <table class="tabla-mensajes">
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Julia Jalal</td>
+                        <td class="asunto">Our Bachelor of Commerce program is ACBSP-accredited.</td>
+                        <td class="hora">8:38 AM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Minerva Barnett</td>
+                        <td class="asunto">Get Best Advertiser in Your Side Pocket</td>
+                        <td class="hora">8:13 AM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Peter Lewis</td>
+                        <td class="asunto">Vacation Home Rental Success</td>
+                        <td class="hora">7:52 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Anthony Briggs</td>
+                        <td class="asunto">Free Classifieds Using Them To Promote Your Stuff Online</td>
+                        <td class="hora">7:52 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Clifford Morgan</td>
+                        <td class="asunto">Enhance Your Brand Potential With Giant Advertising Blimps</td>
+                        <td class="hora">4:13 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Cecilia Webster</td>
+                        <td class="asunto">Always Look On The Bright Side Of Life</td>
+                        <td class="hora">3:52 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Harvey Manning</td>
+                        <td class="asunto">Curling Irons Are As Individual As The Women Who Use Them</td>
+                        <td class="hora">2:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Willie Blake</td>
+                        <td class="asunto">Our Bachelor of Commerce program is ACBSP-accredited.</td>
+                        <td class="hora">8:38 AM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Minerva Barnett</td>
+                        <td class="asunto">Get Best Advertiser in Your Side Pocket</td>
+                        <td class="hora">8:13 AM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Fanny Weaver</td>
+                        <td class="asunto">Free Classifieds Using Them To Promote Your Stuff Online</td>
+                        <td class="hora">7:52 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Olga Hogan</td>
+                        <td class="asunto">Enhance Your Brand Potential With Giant Advertising Blimps</td>
+                        <td class="hora">4:13 PM</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td><img class="estrella" src="img/star-yellow.png" alt="Destacado"></td>
+                        <td class="nombre-remitente">Lora Houston</td>
+                        <td class="asunto">Vacation Home Rental Success</td>
+                        <td class="hora">7:52 PM</td>
+                    </tr>
+                </table>
+                <div class="paginacion">
+                    Showing 1-12 of 245
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

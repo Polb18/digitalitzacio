@@ -1,0 +1,410 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F5F6FA; /* Fondo gris claro */
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* El body ocupa toda la pantalla y usa flex para el layout principal */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+}
+
+/* Menú vertical fijo y a toda la altura */
+.menu {
+    width: 240px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* Línea horizontal decorativa en el menú lateral */
+.menu hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Contenedores de botones del menú lateral, uno debajo del otro */
+#bonones,
+#pages,
+#botones2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre botones */
+    width: 100%;
+}
+
+/* Botones del menú lateral: alineados, sin borde, ocupan todo el ancho */
+#bonones button,
+#pages button,
+#botones2 button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+    gap: 10px;
+}
+
+/* Elimina el margen de los textos de los botones del menú */
+#bonones button p,
+#pages button p,
+#botones2 button p {
+    margin: 0;
+}
+
+/* Menú horizontal fijo en la parte superior, a la derecha del menú lateral */
+.barramenu {
+    width: calc(100vw - 240px);
+    height: 70px;
+    position: fixed;
+    left: 240px;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    box-sizing: border-box;
+    padding: 0 40px 0 0;
+    z-index: 11;
+    border-top-right-radius: 16px;
+}
+
+/* Barra de búsqueda en el menú horizontal */
+.buscador {
+    position: absolute;
+    top: 16px;
+    left: 78px;
+    width: 388px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+/* Input de búsqueda: redondeado y estilizado */
+.buscador input[type="search"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    border: 0.6px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Icono de menú hamburguesa en el menú horizontal */
+.barramenu img[alt="tresbarras"] {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    opacity: 0.898;
+}
+
+/* Notificaciones con contador en la esquina */
+.notificaciones {
+    position: relative;
+    margin-right: 16px;
+}
+.notificaciones img {
+    width: 28px;
+    height: 28px;
+}
+.contador {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Selector de idioma en el menú horizontal */
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.idioma img {
+    width: 32px;
+    height: 22px;
+}
+.idioma select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Perfil de usuario en el menú horizontal */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.perfil img[alt="perfil"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.perfil .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+}
+.perfil .nombre {
+    font-weight: 600;
+    margin: 0;
+    font-size: 16px;
+}
+.perfil .cargo {
+    color: #888;
+    margin: 0;
+    font-size: 14px;
+}
+.perfil .flecha {
+    width: 18px;
+    height: 18px;
+}
+
+/* Contenedor principal de la página, a la derecha y debajo de los menús */
+.container {
+    position: absolute;
+    top: 70px;
+    left: 240px;
+    width: calc(100vw - 240px);
+    min-height: calc(100vh - 70px);
+    padding: 32px 32px 0 32px;
+    box-sizing: border-box;
+    background: #F5F6FA;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Título principal de la página */
+.container h1 {
+    margin: 0 0 16px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Sección azul superior (anuncio/promoción) */
+.anuncio {
+    background: #2D7FF9;
+    border-radius: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 40px;
+    min-height: 160px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.anuncio-info {
+    flex: 1;
+    text-align: left;
+}
+.anuncio-fecha {
+    font-size: 15px;
+    opacity: 0.85;
+    margin-bottom: 8px;
+}
+.anuncio-titulo {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+.anuncio-desc {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 18px;
+}
+.anuncio-btn {
+    background: #FFB547;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.anuncio-btn:hover {
+    background: #ff9900;
+}
+.flecha-izq, .flecha-der {
+    background: #fff;
+    color: #2D7FF9;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grid de productos */
+.products {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    justify-content: stretch; /* Hace que las tarjetas ocupen todo el ancho */
+    margin-top: 32px;
+    margin-bottom: 32px;
+    /* Elimina padding/margin lateral si lo hubiera */
+}
+
+/* Tarjeta de producto individual */
+.producto-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 32px 24px 24px 24px;
+    flex: 1 1 0; /* Crecen igual y ocupan todo el espacio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    /* Elimina max-width para que crezcan igual */
+    box-sizing: border-box;
+    position: relative;
+    transition: box-shadow 0.2s;
+    margin: 0; /* Asegura que no haya margen lateral */
+}
+
+/* Imagen del producto */
+.producto-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+/* Flechas de navegación en la tarjeta */
+.flecha-card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F5F6FA;
+    color: #2D7FF9;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.flecha-card.izq { left: 8px; }
+.flecha-card.der { right: 8px; }
+
+/* Título del producto */
+.producto-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px 0 4px 0;
+    text-align: center;
+}
+
+/* Precio del producto */
+.precio {
+    color: #4880FF;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+/* Estrellas de valoración */
+.estrellas {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+.star {
+    color: #FFC542;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.num-reviews {
+    color: #888;
+    font-size: 13px;
+}
+
+/* Botón de editar producto */
+.edit-btn {
+    background: #F5F6FA;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 500;
+    color: #4880FF;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+.edit-btn:hover {
+    background: #e6edfa;
+}
+
+/* Botón de favorito (corazón) en la tarjeta */
+.fav-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+.fav-btn img {
+    width: 22px;
+    height: 22px;
+}
