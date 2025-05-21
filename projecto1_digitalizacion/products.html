@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/products.css"> 
+</head>
+<body>
+     <!-- Menu horizontal -->
+        <div class="barramenu">
+            <img src="img/tresbarras.png" alt="tresbarras">
+            <!-- Barra de búsqueda funcional -->
+            <form class="buscador" action="#" method="GET">
+                <input 
+                    type="search" 
+                    name="buscar" 
+                    placeholder="Buscar..." 
+                    aria-label="Buscar"
+                >
+            </form>
+            <!-- Notificaciones -->
+            <div class="notificaciones">
+                <img src="img/notificaciones.png" alt="notificaciones">
+                <span class="contador">6</span>
+            </div>
+            <!-- Idioma -->
+            <div class="idioma">
+                <img src="img/bandera.png" alt="bandera">
+                <select id="opciones" name="opciones">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <!-- Perfil -->
+            <div class="perfil">
+                <img src="img/perfil.png" alt="perfil">
+                <div class="info">
+                    <p class="nombre">Moni Roy</p>
+                    <p class="cargo">Admin</p>
+                </div>
+                <img src="img/felchausuario.png" alt="felchausuario" class="flecha">
+            </div>
+        </div>
+
+        <!-- Menu vertical -->
+        <div class="menu">
+            <img src="img/dashstack.png" alt="dashstack">
+            <div id="bonones">
+                <button class="active" onclick="location.href='dashboars.html'">
+                    <img src="img/velocimetro.png" alt="velocimetro">
+                    <p>Dashboard</p>
+                </button>
+                <button onclick="location.href='products.html'">
+                    <img src="img/cuadrados.png" alt="cuadrados">
+                    <p>Products</p>
+                </button>
+                <button onclick="location.href='favorites.html'">
+                    <img src="img/corazon.png" alt="corazon">
+                    <p>Favorites</p>
+                </button>
+                <button onclick="location.href='inbox.html'">
+                    <img src="img/chat.png" alt="chat">
+                    <p>Inbox</p>
+                </button>
+                <button>
+                    <img src="img/lista.png" alt="lista">
+                    <p>Order Lists</p>
+                </button>
+                <button>
+                    <img src="img/stock.png" alt="stock">
+                    <p>Product stock</p>
+                </button>
+            </div>
+            <hr>
+            <div id="pages">
+                <p>Pages</p>
+                <button>
+                    <img src="img/regalo.png" alt="regalo">
+                    <p>Pricing</p>
+                </button>
+                <button>
+                    <img src="img/calendario.png" alt="calendario">
+                    <p>Calender</p>
+                </button>
+                <button>
+                    <img src="img/todo.png" alt="todo">
+                    <p>To-Do</p>
+                </button>
+                <button>
+                    <img src="img/contacto.png" alt="contacto">
+                    <p>Contact</p>
+                </button>
+                <button>
+                    <img src="img/dinero.png" alt="dinero">
+                    <p>Invoice</p>
+                </button>
+                <button>
+                    <img src="img/estadisticas.png" alt="estadisticas">
+                    <p>UI Elements</p>
+                </button>
+                <button>
+                    <img src="img/team.png" alt="team">
+                    <p>Team</p>
+                </button>
+                <button>
+                    <img src="img/table.png" alt="table">
+                    <p>Table</p>
+                </button>
+            </div>
+            <hr>
+            <div id="botones2">
+                <button>
+                    <img src="img/ajustes.png" alt="ajustes">
+                    <p>Settings</p>
+                </button>
+                <button>
+                    <img src="img/salir.png" alt="salir">
+                    <p>Log Out</p>
+                </button>
+            </div>
+        </div>
+
+    <div class="container">
+        <h1>Products</h1>
+        
+        <!-- Sección azul -->
+        <div id="enjoi" class="anuncio">
+            <button class="flecha-izq">&#60;</button>
+            <div class="anuncio-info">
+                <p class="anuncio-fecha">September 12-22</p>
+                <h2 class="anuncio-titulo">Enjoy free home delivery in this summer</h2>
+                <p class="anuncio-desc">Designer Dresses - Pick from trendy Designer Dress.</p>
+                <button class="anuncio-btn">Get Started</button>
+            </div>
+            <button class="flecha-der">&#62;</button>
+        </div>
+
+        <!-- Sección de productos -->
+        <div class="products">
+            <!-- Producto 1 -->
+            <div class="producto-card">
+                <button class="flecha-card izq">&#60;</button>
+                <img src="img/applewatch.jpg" alt="Apple Watch Series 4">
+                <button class="flecha-card der">&#62;</button>
+                <h3>Apple Watch Series 4</h3>
+                <div class="precio">$120.00</div>
+                <div class="estrellas">
+                    <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="num-reviews">(131)</span>
+                </div>
+                <button class="edit-btn">Edit Product</button>
+                <button class="fav-btn"><img src="img/favoritos.png" alt="Fav"></button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto-card">
+                <button class="flecha-card izq">&#60;</button>
+                <img src="img/applewatch.jpg" alt="Apple Watch Series 4">
+                <button class="flecha-card der">&#62;</button>
+                <h3>Apple Watch Series 4</h3>
+                <div class="precio">$120.00</div>
+                <div class="estrellas">
+                    <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="num-reviews">(131)</span>
+                </div>
+                <button class="edit-btn">Edit Product</button>
+                <button class="fav-btn"><img src="img/favoritos.png" alt="Fav"></button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto-card">
+                <button class="flecha-card izq">&#60;</button>
+                <img src="img/applewatch.jpg" alt="Apple Watch Series 4">
+                <button class="flecha-card der">&#62;</button>
+                <h3>Apple Watch Series 4</h3>
+                <div class="precio">$120.00</div>
+                <div class="estrellas">
+                    <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="num-reviews">(131)</span>
+                </div>
+                <button class="edit-btn">Edit Product</button>
+                <button class="fav-btn"><img src="img/favoritos.png" alt="Fav"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

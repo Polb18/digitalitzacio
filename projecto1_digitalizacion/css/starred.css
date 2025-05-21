@@ -1,0 +1,429 @@
+/** Estructura base y fondo **/
+html, body {
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    background: #F5F6FA; /* Fondo gris claro */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuente principal */
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex; /* Para layouts flexibles */
+}
+
+/* Menú vertical fijo y a toda la altura */
+.menu {
+    width: 240px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* Para que los <hr> ocupen todo el ancho del menú vertical */
+.menu hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Botones del menú vertical uno debajo del otro */
+#bonones,
+#pages,
+#botones2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre botones */
+    width: 100%;
+}
+
+/* Estilos de los botones del menú lateral */
+#bonones button,
+#pages button,
+#botones2 button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+    gap: 10px;
+}
+
+/* Elimina el margen de los textos de los botones del menú */
+#bonones button p,
+#pages button p,
+#botones2 button p {
+    margin: 0;
+}
+
+/* Menú horizontal fijo */
+.barramenu {
+    width: calc(100vw - 240px); /* Ocupa el ancho restante */
+    height: 70px;
+    position: fixed;
+    left: 240px;
+    top: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+    box-sizing: border-box;
+    padding: 0 40px 0 0;
+    z-index: 11;
+    border-top-right-radius: 16px;
+}
+
+/* Barra de búsqueda en el menú horizontal */
+.buscador {
+    position: absolute;
+    top: 16px;
+    left: 78px;
+    width: 388px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+/* Input de búsqueda: redondeado y estilizado */
+.buscador input[type="search"] {
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+    border: 0.6px solid #ccc;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Imagen de tres barras en el menú horizontal */
+.barramenu img[alt="tresbarras"] {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    opacity: 0.898;
+}
+
+/* Notificaciones con contador */
+.notificaciones {
+    position: relative;
+    margin-right: 16px;
+}
+.notificaciones img {
+    width: 28px;
+    height: 28px;
+}
+.contador {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Idioma */
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.idioma img {
+    width: 32px;
+    height: 22px;
+}
+.idioma select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.perfil img[alt="perfil"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.perfil .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+}
+.perfil .nombre {
+    font-weight: 600;
+    margin: 0;
+    font-size: 16px;
+}
+.perfil .cargo {
+    color: #888;
+    margin: 0;
+    font-size: 14px;
+}
+.perfil .flecha {
+    width: 18px;
+    height: 18px;
+}
+
+/* Contenedor principal */
+.contenedor-starred {
+    position: absolute;
+    top: 70px;
+    left: 240px;
+    width: calc(100vw - 240px);
+    min-height: calc(100vh - 70px);
+    padding: 32px 32px 0 32px;
+    box-sizing: border-box;
+    background: #F5F6FA;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Título */
+.titulo-starred {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Zona de contenido y menú lateral */
+.zona-starred {
+    display: flex;
+    gap: 32px;
+    height: 100%;
+    min-height: 600px;
+}
+
+/* Menú lateral de la bandeja */
+.menu-lateral {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px 18px;
+    width: 240px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: calc(100vh - 134px); /* 70px barra + 32px*2 padding */
+    position: sticky;
+    top: 70px;
+}
+
+/* Botón de redactar */
+.btn-redactar {
+    background: #4880FF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Listas y etiquetas */
+.titulo-menu {
+    font-weight:600;
+    margin-bottom:8px;
+}
+.lista-correos, .lista-labels {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.lista-correos li, .lista-labels li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.lista-correos li.activo {
+    background: #F5F6FA;
+    color: #4880FF;
+    font-weight: 600;
+}
+.lista-correos .num-correos {
+    background: #4880FF;
+    color: #fff;
+    border-radius: 8px;
+    padding: 2px 10px;
+    font-size: 13px;
+    margin-left: 8px;
+}
+.seccion-label {
+    margin-top: 24px;
+}
+.label-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 8px;
+}
+.label-primary { background: #4ADE80; }
+.label-social { background: #4880FF; }
+.label-work { background: #FFC542; }
+.label-friends { background: #FF6B81; }
+.crear-label {
+    color: #888;
+    font-size: 14px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+/* Zona de mensajes */
+.zona-mensajes {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 134px);
+}
+
+/* Barra de búsqueda */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px 24px 24px;
+}
+.input-buscar {
+    flex: 1;
+    height: 38px;
+    border-radius: 19px;
+    border: 1px solid #e0e0e0;
+    padding: 0 16px;
+    font-size: 15px;
+    outline: none;
+}
+.icono-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.icono-btn img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+/* Tabla de mensajes */
+.tabla-mensajes {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabla-mensajes tr {
+    border-bottom: 1px solid #F0F0F0;
+}
+.tabla-mensajes td {
+    padding: 12px 24px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.tabla-mensajes td.nombre-remitente {
+    font-weight: 600;
+}
+.tabla-mensajes td.asunto {
+    color: #888;
+}
+.estrella {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.etiqueta {
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 8px;
+    display: inline-block;
+}
+.etiqueta.primary { background: #4ADE80; }
+.etiqueta.social { background: #4880FF; }
+.etiqueta.work { background: #FFC542; color: #222; }
+.etiqueta.friends { background: #FF6B81; }
+
+/* Paginación */
+.paginacion {
+    font-size: 14px;
+    color: #888;
+    padding: 12px 24px 24px 24px;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .contenedor-starred {
+        padding: 24px 8px 0 8px;
+    }
+    .zona-starred {
+        gap: 12px;
+    }
+    .menu-lateral {
+        min-width: 160px;
+        padding: 16px 8px;
+    }
+}
+@media (max-width: 900px) {
+    .zona-starred {
+        flex-direction: column;
+    }
+    .menu-lateral {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        position: static;
+    }
+    .zona-mensajes {
+        min-height: 400px;
+    }
+}

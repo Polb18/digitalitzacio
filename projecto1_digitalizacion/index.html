@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboars.css">
+</head>
+<body>
+    <header>
+        <div class="barramenu">
+            <img src="img/tresbarras.png" alt="tresbarras" class="icon-menu">
+            <form class="buscador" action="#" method="GET">
+                <input type="search" name="buscar" placeholder="Search..." aria-label="Buscar">
+            </form>
+            <div class="notificaciones">
+                <img src="img/notificaciones.png" alt="notificaciones">
+                <span class="contador">6</span>
+            </div>
+            <div class="idioma">
+                <img src="img/bandera.png" alt="bandera">
+                <select id="opciones" name="opciones">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <div class="perfil">
+                <img src="img/perfil.png" alt="perfil">
+                <div class="info">
+                    <p class="nombre">Moni Roy</p>
+                    <p class="cargo">Admin</p>
+                </div>
+                <img src="img/felchausuario.png" alt="felchausuario" class="flecha">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="menu">
+            <img src="img/dashstack.png" alt="dashstack" class="logo">
+            <div class="nav-section">
+                <button class="active" onclick="location.href='dashboars.html'"><img src="img/velocimetro.png" alt=""><span>Dashboard</span></button>
+                <button onclick="location.href='products.html'"><img src="img/cuadrados.png" alt=""><span>Products</span></button>
+                <button onclick="location.href='favorites.html'"><img src="img/corazon.png" alt=""><span>Favorites</span></button>
+                <button onclick="location.href='inbox.html'"><img src="img/chat.png" alt=""><span>Inbox</span></button>
+                <button onclick="location.href='order.html'"><img src="img/lista.png" alt=""><span>Order Lists</span></button>
+                <button onclick="location.href='stock.html'"><img src="img/stock.png" alt=""><span>Product stock</span></button>
+            </div>
+            <div class="nav-section pages">
+                <p>Pages</p>
+                <button onclick="location.href='pricing.html'"><img src="img/regalo.png" alt=""><span>Pricing</span></button>
+                <button onclick="location.href='calendar.html'"><img src="img/calendario.png" alt=""><span>Calender</span></button>
+                <button onclick="location.href='todo.html'"><img src="img/todo.png" alt=""><span>To-Do</span></button>
+                <button onclick="location.href='contact.html'"><img src="img/contacto.png" alt=""><span>Contact</span></button>
+                <button onclick="location.href='invoice.html'"><img src="img/dinero.png" alt=""><span>Invoice</span></button>
+                <button onclick="location.href='uielements.html'"><img src="img/estadisticas.png" alt=""><span>UI Elements</span></button>
+                <button onclick="location.href='team.html'"><img src="img/team.png" alt=""><span>Team</span></button>
+                <button onclick="location.href='table.html'"><img src="img/table.png" alt=""><span>Table</span></button>
+            </div>
+            <div class="nav-section">
+                <button onclick="location.href='settings.html'"><img src="img/ajustes.png" alt=""><span>Settings</span></button>
+                <button onclick="location.href='logout.html'"><img src="img/salir.png" alt=""><span>Logout</span></button>
+            </div>
+        </nav>
+        <main>
+            <h1>Dashboard</h1>
+            <div class="totales">
+                <div class="tarjeta-total user">
+                    <img src="img/totaluser.png" alt="totaluser">
+                    <div>
+                        <p class="titulo">Total User</p>
+                        <p class="cantidad">40,689</p>
+                    </div>
+                    <div class="cambio positivo">
+                        <img src="img/flexasubida.png" alt="subida">
+                        <span>8.5%</span>
+                    </div>
+                    <p class="detalle">Up from yesterday</p>
+                </div>
+                <div class="tarjeta-total order">
+                    <img src="img/totalorder.png" alt="totalorder">
+                    <div>
+                        <p class="titulo">Total Order</p>
+                        <p class="cantidad">10293</p>
+                    </div>
+                    <div class="cambio positivo">
+                        <img src="img/flexasubida.png" alt="subida">
+                        <span>1.3%</span>
+                    </div>
+                    <p class="detalle">Up from past week</p>
+                </div>
+                <div class="tarjeta-total sales">
+                    <img src="img/totalsales.png" alt="totalsales">
+                    <div>
+                        <p class="titulo">Total Sales</p>
+                        <p class="cantidad">$89,000</p>
+                    </div>
+                    <div class="cambio negativo">
+                        <img src="img/flexabajada.png" alt="bajada">
+                        <span>4.3%</span>
+                    </div>
+                    <p class="detalle">Down from yesterday</p>
+                </div>
+                <div class="tarjeta-total pending">
+                    <img src="img/totalpending.png" alt="totalpending">
+                    <div>
+                        <p class="titulo">Total Pending</p>
+                        <p class="cantidad">2040</p>
+                    </div>
+                    <div class="cambio positivo">
+                        <img src="img/flexasubida.png" alt="subida">
+                        <span>1.8%</span>
+                    </div>
+                    <p class="detalle">Up from yesterday</p>
+                </div>
+            </div>
+            <section class="sales-details-section">
+                <div class="section-header">
+                    <h2>Sales Details</h2>
+                    <select name="meses" id="meses">
+                        <option value="October">October</option>
+                    </select>
+                </div>
+                <div class="sales-chart">
+                    <!-- Aquí puedes poner una imagen o un canvas para el gráfico -->
+                    <img src="img/salesdetails.png.png" alt="Sales Details Chart" style="width:100%;border-radius:16px;">
+                </div>
+            </section>
+            <section class="deals-details-section">
+                <div class="section-header">
+                    <h2>Deals Details</h2>
+                    <select name="meses2" id="meses2">
+                        <option value="October">October</option>
+                    </select>
+                </div>
+                <div class="deals-table-container">
+                    <table class="deals-table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Location</th>
+                                <th>Date - Time</th>
+                                <th>Piece</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product">
+                                    <img src="img/appledash.png" alt="Apple Watch">
+                                    Apple Watch
+                                </td>
+                                <td>6096 Marjolaine Landing</td>
+                                <td>12.09.2019 - 12:53 PM</td>
+                                <td>423</td>
+                                <td>$34,295</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <!-- Puedes añadir más filas aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="dashboard-widgets-row">
+                <div class="widget customers">
+                    <h3>Customers</h3>
+                    <div class="customers-chart">
+                        <img src="img/customers.png.png" alt="Customers Chart" />
+                    </div>
+                    <div class="customers-data">
+                        <div>
+                            <span class="main-number">34,249</span>
+                            <span class="label">New Customers</span>
+                        </div>
+                        <div>
+                            <span class="main-number">1420</span>
+                            <span class="label">Repeated</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget featured-product">
+                    <h3>Featured Product</h3>
+                    <div class="featured-product-content">
+                        <span>Beats Headphone 2019</span>
+                        <span class="price">$89.00</span>
+                    </div>
+                    <div class="featured-product-arrows">
+                        <button>&lt;</button>
+                        <button>&gt;</button>
+                    </div>
+                </div>
+                <div class="widget sales-analytics">
+                    <h3>Sales Analytics</h3>
+                    <div class="sales-analytics-chart">
+                        <img src="img/analytics.png" alt="Sales Analytics Chart" />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
